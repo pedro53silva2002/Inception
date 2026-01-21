@@ -1,0 +1,26 @@
+Docker: an open platform for developing, shipping, and running applications. Has the ability to package and run an application in a loosely isolated environment.
+
+Image: a read-only with instructions for creating a Docker container.
+
+Container: a runnable instance of a image. By default, a container is relatively well isolated from other containers and its host machine. A container is defined by its image as well as any configuration options you provide to it when you create or start it.
+
+Docker compose: a tool that allows you to define and manage multiple Docker containers simultaneously. With Docker Compose, you can set up, link, and run multiple containers as a single service.
+
+Docker image VS docker compose image:
+- when speaking about names, docker compose will automatically give default names to the images while with docker it gotta be done manually
+- speaking about network the container created from the image without docker compose will be isolated but with it the container will be connected with other containers.
+
+The benefit of Docker compared to VMs:
+-faster startup
+-easier portability
+-low resource use
+
+
+SSL/TLS(Secure Sockets Layer/Transport Layer Security): standard network protocols that protect internet communication by encrypting data between a user's browser and a website
+
+LEMP(Linux/Enginx/Mysql;MariaDB/PHP): a popular open-source software bundle for hosting dynamic websites
+
+Docker volumes: persistent data stores managed by Dockers and are isolated from the core functionality of the host machine
+
+
+Bind mount: connects a file(or folder) to a container (easier to check container files and edit them)

@@ -1,0 +1,13 @@
+Ensure that NGINX can be accessed by port 443 only				:ss -tuln | grep LISTEN
+Ensure that a SSL/TLS certificate is used					:curl -Iv https://login.42.fr
+Ensure that theres a container for each service through docker compose		:docker compose ps
+Sees all volumes								:docker volume ls
+Checks one volume info								:docker volume inspect <volume name>
+Check mariadb tables								:docker exec -it mariadb mariadb -u theuser -p
+										SHOW DATABASES;
+										USE thedatabase;
+										SHOW TABLES;
+										EXIT;
+										
+										
+The pertinence of the directory structure required for this project (an example is provided in the subject's PDF file) : each service have a folder to itself so its easier to work and debug separately.

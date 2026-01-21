@@ -1,0 +1,22 @@
+Notes for inception:
+-docker run -it ubuntu		: command to run a docker container
+-docker ps			: sees all the active docker containers
+-docker ps -a			: sees all the docker containers
+-docker ps -l			: sees the last docker container created
+-docker logs mariadb		: shows the logs of a container
+-docker start [CONTAINER_ID]	: starts a container
+-docker stop [CONTAINER_ID]	: stops a container
+-docker rm [CONTAINER_ID]	: removes a container
+-docker commit -m "What you did to the image" -a "Author Name" container_id repository/new_image_name			: commit for docker
+-docker images			: sees all images
+-docker rmi [IMAGE_ID]		: removes a image
+-docker build -t mariadb .	: builds the container and tests it
+-docker run -d mariadb		: runs the container (-d is to run in the background)
+-docker rm -f $(docker ps -aq) && docker rmi -f $(docker images -aq)
+				: removes all containers and images
+-docker exec -it copiedID /bin/bash: goes into the terminal of the container
+-df -h				: sees the space on your VM
+-docker system prune -af --volumes : cleans docker completely
+-sudo apt clean && sudo apt autoremove -y		: clean apt cache
+
+-docker stop $(docker ps -qa); docker rm $(docker ps -qa); docker rmi -f $(docker images -qa); docker volume rm $(docker volume ls -q); docker network rm $(docker network ls -q) 2>/dev/null: evaluation cleanup
